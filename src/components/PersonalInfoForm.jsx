@@ -107,7 +107,6 @@ const PersonalInfoForm = ({ updateFormStep }) => {
           First Name <strong className="requiredSymbol">*</strong>
           <br />
           <input
-            autoFocus
             id="firstNameField"
             type="text"
             placeholder="First Name..."
@@ -120,7 +119,6 @@ const PersonalInfoForm = ({ updateFormStep }) => {
           Last Name <strong className="requiredSymbol">*</strong>
           <br />
           <input
-            autoFocus
             id="lastNameField"
             type="text"
             placeholder="Last Name..."
@@ -133,7 +131,6 @@ const PersonalInfoForm = ({ updateFormStep }) => {
           Date of Birth <strong className="requiredSymbol">*</strong>
           <br />
           <input
-            autoFocus
             id="dobField"
             type="date"
             required
@@ -146,7 +143,6 @@ const PersonalInfoForm = ({ updateFormStep }) => {
           SSN <strong className="requiredSymbol">*</strong>
           <br />
           <input
-            autoFocus
             id="ssnField"
             type="text"
             placeholder="Social Security Number..."

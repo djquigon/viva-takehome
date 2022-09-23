@@ -55,7 +55,6 @@ const EmploymentInfoForm = ({ updateFormStep, updateLoanSize }) => {
         <label htmlFor="employerNameField">
           Employer Name <strong className="requiredSymbol">*</strong> <br />
           <input
-            autoFocus
             id="employerNameField"
             type="text"
             placeholder="Employer Name..."
