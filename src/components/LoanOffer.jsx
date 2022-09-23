@@ -2,6 +2,11 @@ import { useState } from "react";
 import "../App.css";
 import confettiOverlay from "../assets/confetti_overlay.gif";
 
+/**
+ * The resulting loan offer after submitting a user's info.
+ * @date 2022-09-23
+ * @param { updateFormStep, size } parm1
+ */
 const LoanOffer = ({ updateFormStep, size }) => {
   const [modal, setModal] = useState(false);
   const [accepted, setAccepted] = useState(null);

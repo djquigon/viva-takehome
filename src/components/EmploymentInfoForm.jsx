@@ -1,6 +1,11 @@
 import { useState } from "react";
 import logo from "../assets/logo.svg";
 
+/**
+ * The form for obtaining a user's employment info.
+ * @date 2022-09-23
+ * @param { updateFormStep, updateLoanSize } props
+ */
 const EmploymentInfoForm = ({ updateFormStep, updateLoanSize }) => {
   const [employerName, setEmployerName] = useState(
     localStorage.getItem("employerName") || ""
@@ -13,6 +18,11 @@ const EmploymentInfoForm = ({ updateFormStep, updateLoanSize }) => {
   );
   const [formError, setFormError] = useState(null);
 
+  /**
+   * Validates the employment info form and consequently updates state.
+   * @date 2022-09-23
+   * @param { * } e
+   */
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     /* Save entries in local storage */

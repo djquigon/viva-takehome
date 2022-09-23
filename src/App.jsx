@@ -16,14 +16,28 @@ function App() {
   const [formStep, setFormStep] = useState(0);
   const [loanSize, setLoanSize] = useState(null);
 
+  /**
+   * Passed as a callback function to the form components to update the current form step.
+   * @date 2022-09-23
+   * @param { * } newFormStep
+   */
   const updateFormStep = (newFormStep) => {
     setFormStep(newFormStep);
   };
 
+  /**
+   * Passed as a callback function to the form components to update the current loan size.
+   * @date 2022-09-23
+   * @param { * } newLoanSize
+   */
   const updateLoanSize = (newLoanSize) => {
     setLoanSize(newLoanSize);
   };
 
+  /**
+   * Renders the current form step.
+   * @date 2022-09-23
+   */
   const renderCurrentFormStep = () => {
     switch (formStep) {
       case 0:

@@ -2,6 +2,11 @@ import { useState } from "react";
 import logo from "../assets/logo.svg";
 import "../App.css";
 
+/**
+ * The form for a obtaining a user's personal information.
+ * @date 2022-09-23
+ * @param { updateFormStep } props
+ */
 const PersonalInfoForm = ({ updateFormStep }) => {
   const [firstName, setFirstName] = useState(
     localStorage.getItem("firstName") || ""
@@ -13,6 +18,11 @@ const PersonalInfoForm = ({ updateFormStep }) => {
   const [ssn, setSSN] = useState(localStorage.getItem("ssn") || "");
   const [formError, setFormError] = useState(null);
 
+  /**
+   * Helper function for adding an offset to a user's birth date.
+   * @date 2022-09-23
+   * @param { * } offset
+   */
   const getOffsetDOB = (offset) => {
     /* Ensured difference works for every timezone */
     let splitDOB = dob.split("-");
@@ -23,6 +33,10 @@ const PersonalInfoForm = ({ updateFormStep }) => {
     return convertedDOBPlusOffset;
   };
 
+  /**
+   * Validates the DOB from the personal info form.
+   * @date 2022-09-23
+   */
   const validateDOB = () => {
     let convertedDOBPlus18 = getOffsetDOB(18);
     let convertedDOBPlus125 = getOffsetDOB(125);
@@ -44,6 +58,10 @@ const PersonalInfoForm = ({ updateFormStep }) => {
     }
   };
 
+  /**
+   * Validates the SSN from the personal info form.
+   * @date 2022-09-23
+   */
   const validateSSN = () => {
     let ssnRegex =
       /^(?!(\d)\1{8}$)(?!(\d)\2\2-(\d)\2-(\d)\2{3}$)(?:(?!000|666|9\d\d)\d{3}-(?!00)\d\d-(?!0000)\d{4}|\d{9})$/;
@@ -60,6 +78,11 @@ const PersonalInfoForm = ({ updateFormStep }) => {
     }
   };
 
+  /**
+   * Validates the personal information form.
+   * @date 2022-09-23
+   * @param { * } e
+   */
   const handleFormSubmit = async (e) => {
     e.preventDefault();
     /* Save entries in local storage */
