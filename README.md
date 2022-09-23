@@ -4,7 +4,7 @@ Please create a simple website that supports an extremely simple loan applicatio
 
 ### My implementation
 
-- I've impleneted most all the required functionality and added functionality and adjustments of my own. The only requirement I neglected is disabling the button when input fails validation and this was due to me simply running out of time today as I will be busy the rest of this Friday September 23rd.
+- I've implemeted most all the required functionality and added functionality and adjustments of my own. The only requirement I neglected is disabling the button when input fails validation and this was due to me simply running out of time today as I will be busy the rest of the day this Friday September 23rd.
 
 ### How to Run
 
@@ -12,6 +12,7 @@ Please create a simple website that supports an extremely simple loan applicatio
 
 ### What I would have done with more time
 
--Implemented that one missing functionality
+-Implement that one missing functionality
 -Improved styling of dark mode
 -fix small styling bug with header and footer I've noticed that only happens occasionaly for some reason
+-Better format CSS through the use of CSS modules or tailwind

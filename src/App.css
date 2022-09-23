@@ -5,7 +5,7 @@
     "main"
     "footer";
   grid-template-columns: 100vw;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: 12.5vh auto auto;
   text-align: center;
   color: #003b69;
 }
@@ -20,6 +20,10 @@
     rgb(6 24 12) 0%,
     rgb(23 29 48) 99.4%
   );
+}
+
+header img {
+  width: 140px;
 }
 
 #themeBtn {
