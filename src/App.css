@@ -1,38 +1,270 @@
 .App {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  grid-template-columns: 100vw;
+  grid-template-rows: auto auto auto;
   text-align: center;
+  color: #003b69;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#dark {
+  background-color: rgb(12, 12, 12);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#dark main {
+  background: radial-gradient(
+    circle at 24.1% 68.8%,
+    rgb(6 24 12) 0%,
+    rgb(23 29 48) 99.4%
+  );
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+#themeBtn {
+  border-radius: 20px;
+  padding: 1px;
+  font-size: x-large;
+}
+
+#dark footer,
+#dark header {
+  box-shadow: 0px -5px 20px 0px #0c0c0c;
+}
+
+#dark form {
+  box-shadow: 0px 0px 20px 0px #000000;
+}
+
+form h1 {
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+#vivaTrustStamp {
+  flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+footer,
+header {
+  box-shadow: 0px 0px 20px 0px #d7d7d7;
+}
+
+footer > * {
+  padding: 1em;
+  width: 65%;
+}
+
+header {
+  padding: 1em 0 1em 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+hr {
+  width: 100%;
+  border-top: 1px solid #bbb;
+}
+
+main div {
+  height: 100%;
+  width: 55%;
+  padding: 4em;
+}
+
+main {
+  padding: 2em 0 2em 0;
+}
+
+main,
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+main div > * {
+  margin: 1em;
+}
+
+b {
+  color: #69d393;
+}
+
+header a {
+  width: 15%;
+}
+
+label {
+  background: inherit;
+}
+
+label,
+button {
+  box-shadow: 0 1px 15px 1px #121212;
+  color: white;
+  font-size: large;
+}
+
+label {
+  padding: 1em;
+}
+
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: white;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: white;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: white;
+}
+
+input,
+select {
+  border: none;
+  border-bottom: 2px solid #003b69;
+  background: transparent;
+  color: white;
+}
+
+option {
+  color: black;
+}
+
+.requiredSymbol {
+  color: red;
+}
+
+label,
+button {
+  border-radius: 10px;
+}
+label,
+button,
+input,
+select {
+  padding: 1em;
+  margin: 1em;
+}
+
+button {
+  background-color: #69d393;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+form {
+  box-shadow: 0px 0px 20px 0px #9b9b9b;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 59, 105, 1) 0%,
+    rgba(88, 160, 215, 1) 50%,
+    rgba(105, 211, 147, 1) 100%
+  );
+}
+
+form > * {
+  margin: 1em;
+}
+
+#vivaContactInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+#vivaContactInfo img {
+  margin: 1em;
+}
+
+#vivaExternalLinks div {
+  background-color: #58a0d7;
+  border-radius: 10px;
+  margin: 1em 0 1em 0;
+  padding: 1em;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#vivaRelatedLinks {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.modal,
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  margin: 0;
+}
+
+.overlay {
+  background: rgba(13, 13, 13, 0.8);
+}
+.modalContent {
+  position: absolute;
+  top: 40%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  max-width: 600px;
+  min-width: 300px;
+  text-align: left;
+  color: rgb(0, 0, 0);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#dark .modalContent {
+  background-color: rgb(0 0 0 / 90%);
+  color: white;
+}
+
+#confettiOverlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: absolute;
+  pointer-events: none;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+a {
+  color: #58a0d7;
+  text-decoration: none;
+  font-size: larger;
+}
+
+a:hover {
+  color: #69d393;
+}
+
+small {
+  font-size: x-small;
 }
