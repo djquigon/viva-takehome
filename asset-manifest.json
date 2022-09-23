@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/viva-takehome/static/css/main.ac06292a.css",
+    "main.css": "/viva-takehome/static/css/main.f78d471a.css",
     "main.js": "/viva-takehome/static/js/main.94e28804.js",
     "static/media/confetti_overlay.gif": "/viva-takehome/static/media/confetti_overlay.77c2ad4048a657515aee.gif",
     "static/media/bbb_accredited.png": "/viva-takehome/static/media/bbb_accredited.79327c6f2b6a0d0f7367.png",
@@ -11,11 +11,11 @@
     "static/media/linkedin_icon.webp": "/viva-takehome/static/media/linkedin_icon.3cda8a7e6acd23ec3fd9.webp",
     "static/media/twitter_icon.webp": "/viva-takehome/static/media/twitter_icon.a2632c189bd509e7e319.webp",
     "index.html": "/viva-takehome/index.html",
-    "main.ac06292a.css.map": "/viva-takehome/static/css/main.ac06292a.css.map",
+    "main.f78d471a.css.map": "/viva-takehome/static/css/main.f78d471a.css.map",
     "main.94e28804.js.map": "/viva-takehome/static/js/main.94e28804.js.map"
   },
   "entrypoints": [
-    "static/css/main.ac06292a.css",
+    "static/css/main.f78d471a.css",
     "static/js/main.94e28804.js"
   ]
 }
