@@ -25,6 +25,7 @@ const EmploymentInfoForm = ({ updateFormStep, updateLoanSize }) => {
    */
   const handleFormSubmit = async (e) => {
     e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
     /* Save entries in local storage */
     localStorage.setItem("employerName", employerName);
     localStorage.setItem("grossSalary", grossSalary);
@@ -42,7 +43,6 @@ const EmploymentInfoForm = ({ updateFormStep, updateLoanSize }) => {
         updateLoanSize("Large");
       }
       updateFormStep(2);
-      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 

@@ -85,6 +85,7 @@ const PersonalInfoForm = ({ updateFormStep }) => {
    */
   const handleFormSubmit = async (e) => {
     e.preventDefault();
+    window.scrollTo({ top: 0, behavior: "smooth" });
     /* Save entries in local storage */
     localStorage.setItem("firstName", firstName);
     localStorage.setItem("lastName", lastName);
@@ -93,7 +94,6 @@ const PersonalInfoForm = ({ updateFormStep }) => {
     /* First validate DOB */
     if (validateDOB() === true && validateSSN() === true) {
       updateFormStep(1);
-      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
