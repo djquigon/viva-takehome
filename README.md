@@ -15,4 +15,4 @@ Please create a simple website that supports an extremely simple loan applicatio
 -Implement that one missing functionality
 -Improved styling of dark mode
 -fix small styling bug with header and footer I've noticed that only happens occasionaly for some reason
--Better format CSS through the use of CSS modules or tailwind
+-Better format and refactor CSS through the use of CSS modules or tailwind

@@ -80,7 +80,7 @@ function App() {
           <button id="themeBtn" onClick={toggleTheme}>
             <span role="img">{theme === "light" ? "🌞" : "🌚"}</span>
           </button>
-          <a href="/">Return</a>
+          <a href="https://app.viva-finance.com/register">Return</a>
         </header>
         <main>{renderCurrentFormStep()}</main>
         <footer>

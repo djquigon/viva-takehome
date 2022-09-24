@@ -33,8 +33,8 @@ const LoanOffer = ({ updateFormStep, size }) => {
         alt="confetti overlay"
       ></img>
       <h1>
-        Congratulations, you have been approved for a{" "}
-        <b>{size === "Large" ? "$15,000" : "$500"}</b> loan!
+        Congratulations {localStorage.getItem("firstName")}, you have been
+        approved for a <b>{size === "Large" ? "$15,000" : "$500"}</b> loan!
       </h1>
       <button
         onClick={() => {
@@ -71,12 +71,20 @@ const LoanOffer = ({ updateFormStep, size }) => {
                   Your funds are on the way! The loan term is{" "}
                   {size === "Large" ? "24" : "5"} months.
                 </p>
+                <a href="https://www.viva-finance.com/">
+                  {" "}
+                  Return to the Home Page
+                </a>
               </>
             ) : (
               <>
                 <h1>😔 Darn 😔</h1>
                 <hr />
                 <p>Sorry to hear that. Let us know if you change your mind!</p>
+                <a href="https://www.viva-finance.com/">
+                  {" "}
+                  Return to the Home Page
+                </a>
               </>
             )}
           </div>

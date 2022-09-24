@@ -93,11 +93,21 @@ const PersonalInfoForm = ({ updateFormStep }) => {
     /* First validate DOB */
     if (validateDOB() === true && validateSSN() === true) {
       updateFormStep(1);
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
   };
 
   return (
-    <div className="infoFormContainer">
+    <div>
+      <h1>Looking for financial assistance in these trying times? 😟</h1>
+      <h3>
+        VIVA is designed to provide fast, affordable loans for hardworking
+        employees, all online.
+      </h3>
+      <h3>
+        Please fill out the following form to see if you qualify for a loan from
+        VIVA.
+      </h3>
       <form className="infoForm" onSubmit={(e) => handleFormSubmit(e)}>
         <img height="50px" src={logo} alt="logo" />
         <h5>Loan Application</h5>
